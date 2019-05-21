@@ -1,5 +1,7 @@
 {
   "name": "iClubApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
