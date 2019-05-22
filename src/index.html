@@ -16,6 +16,33 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- Firebase Script -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    console.log(firebase)
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyC7kH6Sm9S_qPwWeFRHbA1U1QsyAfcLO8Q",
+      authDomain: "iclubapp.firebaseapp.com",
+      databaseURL: "https://iclubapp.firebaseio.com",
+      projectId: "iclubapp",
+      storageBucket: "iclubapp.appspot.com",
+      messagingSenderId: "359281872394",
+      appId: "1:359281872394:web:581527526c395336"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    console.log("after "+firebase)
+  </script>
+
+<!-- End of firebase script -->
+
 </head>
 
 <body>
