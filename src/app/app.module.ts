@@ -12,6 +12,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import * as firebase from 'firebase';
 import { environment } from '../environments/environment';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 firebase.initializeApp(environment.firebase);
 
@@ -28,6 +29,7 @@ firebase.initializeApp(environment.firebase);
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthenticationService,
     // { provide: FirestoreSettingsToken, useValue: {} }

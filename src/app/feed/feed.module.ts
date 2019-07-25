@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { FeedPage } from './feed.page';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 const routes: Routes = [
   {
