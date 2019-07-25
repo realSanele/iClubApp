@@ -1,11 +1,14 @@
 <ion-header>
   <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title text-center>login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
         <!-- <h2 text-center style="color: #f25454;">Mzansi Spazas</h2> -->
         <ion-item>
           <ion-label style="font-size: 15pt" position="floating"><ion-icon name="mail"></ion-icon> Email</ion-label>
@@ -35,7 +38,8 @@
             Maximum 12 characters!
           </div>
         
-        <ion-button style="height: 50px; margin-top: 5%; font-size: 13pt" expand="full" color="danger" shape="round" [disabled]="!loginForm.valid" (click)="login()"><ion-icon name="unlock"></ion-icon> Login</ion-button>
+          <ion-button style="height: 50px; margin-top: 5%; font-size: 13pt" type="submit" expand="full" color="danger" shape="round" [disabled]="!loginForm.valid"><ion-icon name="unlock"></ion-icon> Login</ion-button>
+        <!-- <ion-button style="height: 50px; margin-top: 5%; font-size: 13pt" expand="full" color="danger" shape="round" [disabled]="!loginForm.valid" (click)="login()"><ion-icon name="unlock"></ion-icon> Login</ion-button> -->
         <ion-button style="height: 50px; margin-top: 5%; font-size: 13pt" expand="full" color="danger" shape="round" routerDirection="forward" routerLink="/signup"><ion-icon name="person"></ion-icon> Sign-Up</ion-button>
         <ion-button style="margin-top: 5%; font-size: 13pt" expand="full" fill="clear" color="light" >Forgot Password. <a (click)="forgotPassword()">Click here</a></ion-button>
       </form>

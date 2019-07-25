@@ -1,6 +1,9 @@
 ion-content{
     --background: url('../../assets/icon/background.jpg') no-repeat center center / cover;
   
+    form{
+      margin-top: 10%
+    }
     .buttons{
       padding-top: 50%;
       // ion-button{
@@ -8,10 +11,40 @@ ion-content{
       // }
     }
 
+    .error{
+      color: white;
+      text-align: center;
+      font-size: 13pt;
+    }
+
+    ion-label{
+      font-size: 15pt;
+    }
+
+    ion-input{
+      font-size: 13pt;
+    }
+
     ion-item{
-      margin: 0.5em;
-      border-radius: 5px;
+      // background: rgba(black, 0.5);
+      // margin: 0.5em;
+      // border-radius: 5px;
+      // width: 90%;
+      // background: none;
+
+      margin-left: 5%;
       width: 90%;
-      background: none;
+      // height: 100px;
+      opacity: .8;
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px;
+      border-radius: 10px;
+      margin-bottom: 10px;
     } 
+
+    ion-button{
+      margin-top: 5%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
 }
